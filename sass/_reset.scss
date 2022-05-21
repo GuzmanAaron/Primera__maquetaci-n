@@ -11,7 +11,12 @@ a{
     /* display: block; */
 }
 li{
-    list-style: none;}
+    list-style: none;
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
 
 h1, h2, h3, h4, h5{
     font-size: inherit;
@@ -34,8 +39,8 @@ form, button, input{
 }
 body{
     width: 100%;
-   
-    min-height: 100vh;
+   font-size: 16px;
+    
 }
 
 .clearfix{

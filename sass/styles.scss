@@ -1,4 +1,5 @@
 @use 'reset';
+@use 'mobil';
 
 $fuente-2: 'Roboto Condensed', sans-serif;
 $fuente-1: 'Source Serif Pro', serif;
@@ -8,113 +9,117 @@ $color-2: #333;
 
 body {
     background-image: url(../img/fondo.png);
+
 }
 
 .header {
-    
-    width: 100%;
-    min-width: 72rem;
-    height: 14rem;
+    width: 100vw;
+    height: 14em;
     margin: 0 auto;
-    
-    &__logo{
-        width: 8.7rem;
-        
+
+    &__logo {
+        width: 8.7em;
         margin: 0 auto;
-        margin-top: 1.6rem;
+        margin-top: 1.6em;
     }
-    &__img{
+
+    &__img {
         align-items: center;
     }
-    &__h1{
+
+    &__h1 {
         text-align: center;
         font-family: $fuente-1;
-        font-size: 3rem;
+        font-size: 3em;
         font-weight: bold;
         text-shadow: 0px 1px 2px $color-2;
         letter-spacing: 0.5rem;
-        transition: all 300ms ;
-   
+        transition: all 300ms;
     }
-    &__h1:hover{
+
+    &__h1:hover {
         text-shadow: 0px 2px 1px $color-2, 0px 0px 4px $color-1;
     }
-    &__a{
+
+    &__a {
         color: $color-1;
     }
-   
 }
 
-.nav{
+.nav {
     background-color: $color-2;
-    width: 100%;
-    min-width: 72rem;
-    height: 2.5rem;
+    width: 100vw;
+    color: white;
+    height: auto;
     font-family: $fuente-2;
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 0.9em;
+    box-shadow: 0px 0px 2px gray;
+    margin-bottom: 2rem;
 
-    &__ul{
+    &__ul {
         
+        width: 68.125rem;
         margin: 0 auto;
-        width: 70rem;
-    
-    }
-    &__li{
-        
-        border-right: solid gray 1px;
-        float:left;
-        line-height: 2.5rem;
-        padding-right: 0.5rem;
-        padding-left: 0.5em;  
     }
 
-    &__li:hover{
-        background-color: $color-1;
-        box-shadow: 0px 0px 5px #2564a4 inset ;
-    }
-    
-    &__a{
-        display: block;
-        color: white;
-        padding-left: 1rem;
-        padding-right: 1rem;
+    &__li {
+        line-height: 2.5rem;
+        float: left;
+        border-right: 1px solid gray;
       
+        
     }
-    &__li--1{
+
+    &__a {
+        background-color: $color-2;
+        display: block;
+        padding-left: 1.8vw;
+        padding-right: 1.8vw;
+        transition: all 300ms;
+    }
+
+    &__a:hover {
+        background-color: $color-1;
+        box-shadow: 0px 0px 5px #2564a4 inset;
+    }
+
+    &__li--1 {
         border-left: solid 1px gray;
     }
-   
-
-
 }
 
 
-.main{
-    
+.main {
+
     width: 100%;
-          
-    &__aside{
+    // max-width: 72rem;
+    margin: 0 auto;
+    font-family: $fuente-2;
+
+    &__aside {
         float: left;
-        width:12rem;
+        width: 15vw;
         background-color: white;
         border: 1px solid black;
-        margin-left: 4rem;
-        margin-top: 20px;
         box-shadow: 0px 0px 5px #333;
+        margin-left: 4em;
+        
 
     }
+
     // &__1{}
-    &__box-1{
+    &__box-1 {
         border-bottom: 1px solid #333;
-        margin-bottom: 0.8rem;
-        padding-bottom: 0.8rem;
+        margin-bottom: 0.8em;
+        padding-bottom: 0.8em;
     }
-    &__h3{
+
+    &__h3 {
+        display: block;
         font-family: $fuente-2;
         text-align: center;
-        margin: 0.5rem;
-      
+        margin: 0.5em;
+
         background-color: #eee;
 
         border: 1px solid black;
@@ -122,118 +127,128 @@ body {
         border-right: none;
         font-weight: bold;
     }
-    &__form{
+
+    &__form {
         display: block;
         width: auto;
         margin: 0.5rem;
         margin: 0 auto;
         text-align: center;
     }
-    &__label{
+
+    &__label {
         text-align: center;
         align-items: center;
-       
+
         margin: 0.5rem;
         margin: 0 auto;
         color: black;
 
     }
-    &__input{
-        width: 170px;
+
+    &__input {
+        width: 80%;
         margin: 0 auto;
         border: 1px solid black;
         margin: 0.1rem;
 
     }
-    &__submit{
+
+    &__submit {
         width: 60px;
         background-color: $color-1;
-        
-        
+
+
         text-align: center;
-        
+
         margin: 0 auto;
         margin-top: 10px;
         color: white;
 
 
     }
-    &__a{
+
+    &__a {
         display: block;
         color: $color-1;
         font-family: $fuente-2;
         margin: 0.5rem;
-        font-size: 15px;
+        font-size: 0.938em;
     }
     
-
-
-    &__box-1--rojo{
+    &__box-1--rojo {
         color: red;
     }
-    &__box-1--azul{
+
+    &__box-1--azul {
         color: blue;
     }
+
     // &__ul{}
     // &__li{}
     // &__2{}
 
-    &__article{
+    &__article {
         float: right;
         background-color: white;
-        margin-top: 20px;
-        margin-right: 30px;
+        margin-top: 1.25rem;
+        margin-right: 3rem;
 
-        width: 75%;
+        width: 71vw;
         margin-bottom: 20px;
         padding-bottom: 20px;
         box-shadow: 0px 0px 5px #333;
-        
+
     }
-    &__h2{
+
+    &__h2 {
         font-family: $fuente-2;
-        font-size: 2rem;
+        font-size: 2em;
         text-align: center;
         margin: 0.8rem;
         font-weight: bold;
         border-bottom: 1px solid black;
         padding-bottom: 10px;
     }
-    &__p{
+
+    &__p {
         margin-left: 20px;
-        font-size: 1rem;
+        font-size: 1em;
         font-family: $fuente-2;
 
     }
-    &__a--2{
+
+    &__a--2 {
         color: $color-1;
         font-family: $fuente-2;
-        
-        font-size: 15px;
+
+        font-size: 0.938em;
     }
-    &__date{
-        margin-left: 20px;
+
+    &__date {
+        margin-left: 1.25em;
         color: rgb(167, 160, 160);
     }
 
 }
-.noticias{
+
+.noticias {
     float: right;
     margin-right: 30px;
-    
-    &__a{
+
+    &__a {
         color: $color-1;
     }
 }
 
 
-.footer{
-    &__p{
+.footer {
+    &__p {
         width: 100%;
         background-color: $color-2;
         color: #eee;
         text-align: center;
-        
+
         margin: 0 auto;
         line-height: 2rem;
         height: 2rem;
